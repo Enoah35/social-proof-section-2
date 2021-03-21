@@ -1,88 +1,125 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  background: url(/images/bg-pattern-bottom-desktop.svg) no-repeat, url(/images/bg-pattern-top-desktop.svg) no-repeat;
+  background: url(../images/bg-pattern-bottom-desktop.svg) no-repeat,
+    url(../images/bg-pattern-bottom-desktop.svg) no-repeat;
   font-family: "Spartan", sans-serif;
   font-size: 15px;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 h1 {
   font-weight: 700;
-  color: #502050; }
+  color: #502050;
+}
 
 .container {
-  max-width: 1440px; }
+  max-width: 1440px;
+}
 
 .social-panel {
   display: grid;
-  grid-template-areas: "main rate rate" "test1 test2 test3";
+  grid-template-areas:
+    "main rate rate"
+    "test1 test2 test3";
   gap: 2rem;
-  padding: 8rem; }
-  .social-panel .main {
-    grid-area: main; }
-  .social-panel .rate {
-    grid-area: rate;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .social-panel .rate p {
-      padding: 1rem 7rem 1rem 2rem;
-      margin-bottom: 1rem;
-      background: #f7f2f7;
-      border-radius: 10px; }
-    .social-panel .rate span {
-      margin-right: 2rem; }
-    .social-panel .rate p:first-child {
-      align-self: flex-start; }
-    .social-panel .rate p:nth-child(2) {
-      padding-right: 5rem; }
-    .social-panel .rate p:last-child {
-      align-self: flex-end; }
-  .social-panel .testimonials {
-    background: #502050;
-    border-radius: 10px;
-    padding: 2rem 1.5rem;
-    color: white; }
-    .social-panel .testimonials h3 {
-      color: white; }
-    .social-panel .testimonials img {
-      float: left;
-      border-radius: 50%;
-      width: 50px;
-      margin-right: 1.5rem; }
-    .social-panel .testimonials .client-verified {
-      color: #ee68a4;
-      margin-bottom: 2rem; }
-  .social-panel:nth-child(3) {
-    grid-area: test1; }
-  .social-panel:nth-child(4) {
-    grid-area: test2; }
-  .social-panel:last-child {
-    grid-area: test3; }
+  padding: 8rem;
+}
+.social-panel .main {
+  grid-area: main;
+}
+.social-panel .rate {
+  grid-area: rate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.social-panel .rate p {
+  padding: 1rem 7rem 1rem 2rem;
+  margin-bottom: 1rem;
+  background: #f7f2f7;
+  border-radius: 10px;
+}
+.social-panel .rate span {
+  margin-right: 2rem;
+}
+.social-panel .rate p:first-child {
+  align-self: flex-start;
+}
+.social-panel .rate p:nth-child(2) {
+  padding-right: 5rem;
+}
+.social-panel .rate p:last-child {
+  align-self: flex-end;
+}
+.social-panel .testimonials {
+  background: #502050;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  color: white;
+}
+.social-panel .testimonials h3 {
+  color: white;
+}
+.social-panel .testimonials img {
+  float: left;
+  border-radius: 50%;
+  width: 50px;
+  margin-right: 1.5rem;
+}
+.social-panel .testimonials .client-verified {
+  color: #ee68a4;
+  margin-bottom: 2rem;
+}
+.social-panel:nth-child(3) {
+  grid-area: test1;
+}
+.social-panel:nth-child(4) {
+  grid-area: test2;
+}
+.social-panel:last-child {
+  grid-area: test3;
+}
 
 .attribution {
   font-size: 11px;
-  text-align: center; }
+  text-align: center;
+}
 
 .attribution a {
-  color: #3e52a3; }
+  color: #3e52a3;
+}
 
 @media (max-width: 600px) {
   body {
-    background: url(/images/bg-pattern-top-mobile.svg) no-repeat, url(/images/bg-pattern-bottom-mobile.svg) no-repeat; }
+    background: url(../images/bg-pattern-top-mobile.svg) no-repeat,
+      url(../images/bg-pattern-bottom-mobile.svg) no-repeat;
+  }
   .social-panel {
     padding: 2rem;
-    grid-template-areas: "main" "rate" "test1" "test2" "test3"; }
+    grid-template-areas:
+      "main"
+      "rate"
+      "test1"
+      "test2"
+      "test3";
+  }
   .main {
-    text-align: center; }
-    .main h1 {
-      margin-bottom: 1rem; }
+    text-align: center;
+  }
+  .main h1 {
+    margin-bottom: 1rem;
+  }
   .rate {
-    text-align: center; }
-    .rate span {
-      display: block;
-      margin: 0; } }
+    text-align: center;
+  }
+  .rate span {
+    display: block;
+    margin: 0;
+  }
+}
