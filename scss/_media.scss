@@ -1,41 +1,60 @@
-// Tablet Screen
-@media (max-width: 600px) {
+// Desktop Size
+
+@media (min-width: 376px) {
   body {
-    background: url(images/bg-pattern-top-mobile.svg) no-repeat,
-      url(images/bg-pattern-bottom-mobile.svg) no-repeat;
+    background: $bg-top no-repeat top left, $bg-bottom no-repeat bottom right;
   }
 
   .social-panel {
-    padding: 2rem;
-    grid-template-areas:
-      "main"
-      "rate"
-      "test1"
-      "test2"
-      "test3";
-  }
+    margin: 10rem;
+    grid-template-columns: repeat(2, 2fr);
 
-  .main {
-    text-align: center;
+    .main {
+      text-align: left;
 
-    h1 {
-      margin-bottom: 1rem;
-    }
-  }
-
-  .rate {
-    text-align: center;
-    span {
-      display: block;
-      margin: 0;
+      h1 {
+        font-size: 40px;
+        padding: 0 45% 0 0;
+      }
+      p {
+        padding: 0.5rem 10rem 0 0;
+      }
     }
 
-    &:first-child {
-      align-self: center;
+    .rate {
+      h3 {
+        margin: 0 5rem 0 2rem;
+        span {
+          display: inline-block;
+          margin-right: 2rem;
+        }
+      }
+
+      & h3:first-child {
+        position: relative;
+        right: 5rem;
+      }
+
+      & h3:last-child {
+        position: relative;
+        left: 5rem;
+      }
     }
 
-    &:last-child {
-      align-self: center;
+    .testimonial {
+      grid-column: 1 / span 2;
+      gap: 1.5rem;
+      flex-direction: row;
+
+      & div:nth-child(2) {
+        position: relative;
+        top: 1rem;
+      }
+
+      & div:last-child {
+        position: relative;
+        top: 2rem;
+      }
     }
   }
 }
