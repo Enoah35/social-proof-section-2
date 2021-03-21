@@ -1,0 +1,33 @@
+// Tablet Screen
+@media (max-width: 600px) {
+  body {
+    background: url(/images/bg-pattern-top-mobile.svg) no-repeat,
+      url(/images/bg-pattern-bottom-mobile.svg) no-repeat;
+  }
+
+  .social-panel {
+    padding: 2rem;
+    grid-template-areas:
+      "main"
+      "rate"
+      "test1"
+      "test2"
+      "test3";
+  }
+
+  .main {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .rate {
+    text-align: center;
+    span {
+      display: block;
+      margin: 0;
+    }
+  }
+}

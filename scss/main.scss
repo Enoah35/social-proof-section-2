@@ -1,0 +1,116 @@
+@import "config";
+
+// General CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/images/bg-pattern-bottom-desktop.svg) no-repeat,
+    url(/images/bg-pattern-top-desktop.svg) no-repeat;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-weight: 700;
+  color: $vdark-magenta;
+}
+
+// Utility CSS
+
+.container {
+  max-width: $website-width;
+}
+
+// Main CSS
+
+.social-panel {
+  display: grid;
+  grid-template-areas:
+    "main rate rate"
+    "test1 test2 test3";
+  gap: 2rem;
+  padding: 8rem;
+
+  .main {
+    grid-area: main;
+  }
+
+  .rate {
+    grid-area: rate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+      padding: 1rem 7rem 1rem 2rem;
+      margin-bottom: 1rem;
+      background: $lgray-magenta;
+      border-radius: 10px;
+    }
+
+    span {
+      margin-right: 2rem;
+    }
+
+    p:first-child {
+      align-self: flex-start;
+    }
+
+    p:nth-child(2) {
+      padding-right: 5rem;
+    }
+
+    p:last-child {
+      align-self: flex-end;
+    }
+  }
+
+  .testimonials {
+    background: $vdark-magenta;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    color: $white-color;
+
+    h3 {
+      color: $white-color;
+    }
+
+    img {
+      float: left;
+      border-radius: 50%;
+      width: 50px;
+      margin-right: 1.5rem;
+    }
+
+    .client-verified {
+      color: $soft-pink;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &:nth-child(3) {
+    grid-area: test1;
+  }
+  &:nth-child(4) {
+    grid-area: test2;
+  }
+  &:last-child {
+    grid-area: test3;
+  }
+}
+
+// Footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@import "media";
